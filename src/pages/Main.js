@@ -1,12 +1,12 @@
-
-
 import { useEffect, useState } from "react";
+import reactCommander from "../publishers/reactCommander.ts";
 
 function Main() {
 
     const [title, setTitle] = useState("scene test buttons ");
 
     useEffect(() => {
+		reactCommander("are you listeing now?")
     })
 
     return (
