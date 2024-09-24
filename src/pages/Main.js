@@ -9,6 +9,12 @@ function Main() {
 		reactCommander("are you listeing now?")
     })
 
+	// publish test
+	setInterval(()=> {
+		reactCommander("Test String Message")
+		console.log("I guess the topic is published!")
+	}, 10000)
+
     return (
         <div>
 			<h1> {title}</h1>

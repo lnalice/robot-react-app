@@ -24,12 +24,12 @@ ros.on('close', () => {
  */
 const reactCommander = function(msg: String) {
   const customTopic = new ROSLIB.Topic({
-    ros: ros,
-    name: '/react/commander',
-    messageType: 'std_msgs/String'
+    ros : ros,
+    name : '/react/commander',
+    messageType  : 'std_msgs/String'
   });
 
-  const strMsg = new ROSLIB.Message(msg)
+  const strMsg = new ROSLIB.Message({data: msg})
 
   customTopic.publish(strMsg)
 
