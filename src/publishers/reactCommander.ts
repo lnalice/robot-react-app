@@ -33,6 +33,8 @@ const reactCommander = function(msg: String) {
 
   customTopic.publish(strMsg)
 
+  console.log("[React Commander] I published msg " , msg)
+
 }
 
 export default reactCommander;
