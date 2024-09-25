@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import reactCommander from "../publishers/reactCommander.ts";
+import newCommander from "../helper/newCommander.ts";
 
 function Main() {
 
@@ -7,7 +8,8 @@ function Main() {
 
     useEffect(() => {
 		reactCommander("are you listeing now?")
-    })
+		// console.log(newCommander("scene", "scene_0", ["tb3_0", "tb3_1"]));
+   })
 
 	// publish test
 	setInterval(()=> {
