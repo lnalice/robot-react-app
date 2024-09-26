@@ -1,21 +1,22 @@
+import { useEffect, useState } from "react";
+import reactCommander from "../publishers/reactCommander.ts";
+import newCommander from "../helper/newCommander.ts";
 import BasicButton from "../style/button.js";
-import BasicContainer from "../style/div.js";
+import BasicInput from "../style/input.js";
 
 function CustomCommand () {
+	const [customData, setCustomData] = useState("");
+
+    useEffect(() => {
+		reactCommander("are you listeing now?")
+		console.log(newCommander("scene", "scene_0", ["tb3_0", "tb3_1"]));
+   })
 
     return(
         <>
-            <h1>scene test buttons</h1>
-			<BasicContainer>
-					<BasicButton id="scene_1">scene 1</BasicButton>
-					<BasicButton id="scene_2-1">scene 2-1</BasicButton>
-					<BasicButton id="scene_2-2">scene 2-2</BasicButton>
-					<BasicButton id="scene_3-1">scene 3-1</BasicButton>
-					<BasicButton id="scene_3-2">scene 3-2</BasicButton>
-					<BasicButton id="scene_4-1">scene 4-1</BasicButton>
-					<BasicButton id="scene_4-2">scene 4-2</BasicButton>
-					<BasicButton id="scene_4-3">scene 4-3</BasicButton>
-			</BasicContainer>
+            <h1> custom command</h1>
+			<BasicInput onChange={(e) => setCustomData(e.target.value)} placeholder='(ex. move scene_0 tb3_0 tb3_1)'></BasicInput>
+			<BasicButton onClick={(e) => reactCommander(customData)}>publish</BasicButton>
         </>
     )
 }

@@ -5,9 +5,9 @@ function Main() {
     
     return (
         <>
-			<CustomCommand/>
-			<h1> - </h1>
 			<SceneButtons/>
+			<h1> - </h1>
+			<CustomCommand/>
         </>
     );
 }
